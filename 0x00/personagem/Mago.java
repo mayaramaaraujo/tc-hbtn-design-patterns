@@ -8,7 +8,7 @@ public class Mago extends Personagem {
     }
 
     @Override
-    double getDanoAtaque() {
+    public double getDanoAtaque() {
         return (super.getInteligencia() * 0.8) + (super.getForca() * 0.05) + (super.getDestreza() * 0.05) + (super.getVigor() * 0.1);
     }
 }
