@@ -45,9 +45,7 @@ public abstract class Personagem {
         return destreza;
     }
 
-    double getDanoAtaque() {
-        return 1d;
-    }
+    abstract double getDanoAtaque();
 
     @Override
     public String toString() {
