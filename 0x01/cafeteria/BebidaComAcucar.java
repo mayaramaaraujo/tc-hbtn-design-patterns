@@ -7,8 +7,9 @@ public class BebidaComAcucar extends BebidaDecorator {
 
     @Override
     public List<String> obterIngredientes() {
-        super.obterIngredientes().add("acucar");
-        return super.obterIngredientes();
+        List<String> lista = super.obterIngredientes();
+        lista.add("acucar");
+        return lista;
     }
 
     @Override
