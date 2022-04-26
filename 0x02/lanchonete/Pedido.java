@@ -25,18 +25,14 @@ public class Pedido {
 
     @Override
     public String toString() {
+
         return "\tFora da Caixa:\n" +
-                itensForaCaixa.stream().map(itemPedido -> String.format("\t\t- %s %s", itemPedido.getTipo(), itemPedido.getNome()))
-                        .collect(Collectors.toList())
-                        .toString().replace("[","")
+                itensForaCaixa.toString().replace("[","")
                         .replace("]", "")
                         .replace(",", "\n") + "\n" +
                 "\tDentro da Caixa:\n" +
-                itensDentroCaixa.stream().map(itemPedido -> String.format("\t\t- %s %s", itemPedido.getTipo(), itemPedido.getNome()))
-                        .collect(Collectors.toList())
-                        .toString().replace("[","")
+                itensDentroCaixa.toString().replace("[","")
                         .replace("]", "")
                         .replace(",", "\n") + "\n";
-
     }
 }
