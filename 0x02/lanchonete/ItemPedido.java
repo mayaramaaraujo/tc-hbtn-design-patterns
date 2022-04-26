@@ -17,9 +17,4 @@ public class ItemPedido {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    @Override
-    public String toString() {
-        return "        - " + tipo.name() + " " + nome;
-    }
 }
