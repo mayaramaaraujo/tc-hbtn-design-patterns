@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Impressao {
     private TamanhoImpressao tamanhoImpressao;
     private int paginasTotais;
@@ -77,7 +79,7 @@ public class Impressao {
 
     @Override
     public String toString() {
-        return String.format("total de paginas: %d, total coloridas: %d, total preto e branco: %d, %s. total: R$ %.2f",
+        return String.format(Locale.FRANCE,"total de paginas: %d, total coloridas: %d, total preto e branco: %d, %s. total: R$ %.2f",
                 paginasTotais, paginasColoridas, paginasPretoEBranco, ehFrenteVerso ? "frente e verso" : "frente apenas", calcularTotal());
     }
 }
