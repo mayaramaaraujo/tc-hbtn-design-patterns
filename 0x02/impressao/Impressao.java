@@ -77,13 +77,7 @@ public class Impressao {
 
     @Override
     public String toString() {
-        String frenteVerso = "frente apenas";
-
-        if (ehFrenteVerso == true){
-            frenteVerso = "frente e verso";
-        }
-
-        return "total de paginas: " +  paginasTotais +  ", total coloridas: " + paginasColoridas + ", total preto e branco: " + (paginasTotais - paginasColoridas) + ". " +
-                frenteVerso + ", total: R$ " + calcularTotal();
+        return String.format("total de paginas: %d, total coloridas: %d, total preto e branco: %d, %s. total: R$ %.2f",
+                paginasTotais, paginasColoridas, paginasPretoEBranco, ehFrenteVerso ? "frente e verso" : "frente apenas", calcularTotal());
     }
 }
