@@ -36,7 +36,7 @@ public class Pedido {
                         .collect(Collectors.toList())
                         .toString().replace("[","")
                         .replace("]", "")
-                        .replace(",", "\n");
+                        .replace(",", "\n") + "\n";
 
     }
 }
